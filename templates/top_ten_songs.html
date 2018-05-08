@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Top Songs {% endblock %}
+
+{% block content %}
+
+    <h2>My Top Songs</h2>
+    <table class ="table table-bordered table-striped">
+        <tr>
+        <th>title</th>
+        <th>artist_name</th>
+        <th>Youtube.urlr </th>
+        </tr>
+
+
+        {% for song in songs %}
+        <tr>
+        <td>{{ song.period }}</td>
+        <td>{{ song.name }}</td>
+        <td><a href="{{ course.resource_url }}">{{ course.resource_name }}</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
